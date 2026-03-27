@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-purple: #401D6C;
+  --brand-purple-d: #2E1550;
+  --brand-purple-l: #5A2D96;
+  --brand-pink: #EC385D;
+  --brand-peach: #FF8073;
+  --brand-surface: #FFFFFF;
+  --brand-cream: #FAF7FF;
+  --brand-text: #1A1225;
+  --brand-text-2: #5E5470;
+  --brand-text-3: #8E849A;
+  --brand-border: #E8E2F0;
+  --brand-border-f: #7C5CBF;
+  --brand-success: #188038;
+  --brand-warning: #F59E0B;
+  --brand-error: #D93025;
+}
+
+body {
+  color: var(--brand-text);
+  background: var(--brand-cream);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
